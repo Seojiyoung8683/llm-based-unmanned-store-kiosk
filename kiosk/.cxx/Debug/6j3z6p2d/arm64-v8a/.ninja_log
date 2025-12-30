@@ -1,0 +1,21 @@
+# ninja log v5
+3	440	7854360369462918	build.ninja	d6b409273be671f0
+77	1018	7854352097211904	CMakeFiles/Llama2Genie.dir/Logging.cpp.o	63899f1b89717e1d
+49	2652	7854352113781541	CMakeFiles/Llama2Genie.dir/native-lib.cpp.o	1742371aa19f5030
+8	2675	7854357091592501	CMakeFiles/Llama2Genie.dir/LlmClient.cpp.o	22852716989fba70
+1	22	0	clean	c17e2d8af63f63a2
+61	3467	7854352121746038	CMakeFiles/Llama2Genie.dir/main.cpp.o	d272fc3f6489e0c1
+2676	2965	7854357094556192	C:/kioskfinal/kiosk/build/intermediates/cxx/Debug/6j3z6p2d/obj/arm64-v8a/libLlama2Genie.so	2f42c8305fbfe5a0
+66	448	7854360374902105	CMakeFiles/Llama2Genie.dir/Logging.cpp.o	42c3f7cc55b5cf63
+23	1277	7854360383207126	CMakeFiles/Llama2Genie.dir/native-lib.cpp.o	d07cc011563e3470
+51	1327	7854360383678273	CMakeFiles/Llama2Genie.dir/LlmClient.cpp.o	25edfbd4746e6f4f
+37	1840	7854360388769179	CMakeFiles/Llama2Genie.dir/main.cpp.o	42ffc1267f3d9cf8
+1840	2129	7854360391654188	C:/kioskfinal/kiosk/build/intermediates/cxx/Debug/6j3z6p2d/obj/arm64-v8a/libLlama2Genie.so	3af36022e371abae
+1	24	0	clean	c17e2d8af63f63a2
+94	449	7854366177153001	CMakeFiles/Llama2Genie.dir/Logging.cpp.o	42c3f7cc55b5cf63
+57	1285	7854366185462264	CMakeFiles/Llama2Genie.dir/native-lib.cpp.o	d07cc011563e3470
+83	1292	7854366185523942	CMakeFiles/Llama2Genie.dir/LlmClient.cpp.o	25edfbd4746e6f4f
+70	1804	7854366190505064	CMakeFiles/Llama2Genie.dir/main.cpp.o	42ffc1267f3d9cf8
+1804	2035	7854366192928379	C:/kioskfinal/kiosk/build/intermediates/cxx/Debug/6j3z6p2d/obj/arm64-v8a/libLlama2Genie.so	3af36022e371abae
+17	2553	7854605443418088	CMakeFiles/Llama2Genie.dir/LlmClient.cpp.o	25edfbd4746e6f4f
+2555	2895	7854605446741512	C:/kioskfinal/kiosk/build/intermediates/cxx/Debug/6j3z6p2d/obj/arm64-v8a/libLlama2Genie.so	3af36022e371abae

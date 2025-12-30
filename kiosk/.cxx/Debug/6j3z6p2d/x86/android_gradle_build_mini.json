@@ -1,0 +1,29 @@
+{
+  "buildFiles": [
+    "C:\\kioskfinal\\kiosk\\src\\main\\cpp\\CMakeLists.txt"
+  ],
+  "cleanCommandsComponents": [
+    [
+      "C:\\Users\\ssshd\\AppData\\Local\\Android\\Sdk\\cmake\\3.22.1\\bin\\ninja.exe",
+      "-C",
+      "C:\\kioskfinal\\kiosk\\.cxx\\Debug\\6j3z6p2d\\x86",
+      "clean"
+    ]
+  ],
+  "buildTargetsCommandComponents": [
+    "C:\\Users\\ssshd\\AppData\\Local\\Android\\Sdk\\cmake\\3.22.1\\bin\\ninja.exe",
+    "-C",
+    "C:\\kioskfinal\\kiosk\\.cxx\\Debug\\6j3z6p2d\\x86",
+    "{LIST_OF_TARGETS_TO_BUILD}"
+  ],
+  "libraries": {
+    "Llama2Genie::@6890427a1f51a3e7e1df": {
+      "artifactName": "Llama2Genie",
+      "abi": "x86",
+      "output": "C:\\kioskfinal\\kiosk\\build\\intermediates\\cxx\\Debug\\6j3z6p2d\\obj\\x86\\libLlama2Genie.so",
+      "runtimeFiles": [
+        "C:\\kioskfinal\\kiosk\\src\\main\\jniLibs\\arm64-v8a\\libGenie.so"
+      ]
+    }
+  }
+}

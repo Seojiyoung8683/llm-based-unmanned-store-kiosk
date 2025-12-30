@@ -1,0 +1,9 @@
+# ninja log v5
+131	856	7852830816744686	CMakeFiles/Llama2Genie.dir/Logging.cpp.o	5cf8403dc9150196
+4	358	7854359368558456	build.ninja	5a52b75d2875b5ac
+1	2880	7852830836971742	CMakeFiles/Llama2Genie.dir/native-lib.cpp.o	5aa6b97634e9378
+0	18	0	clean	c17e2d8af63f63a2
+49	3358	7852830841920679	CMakeFiles/Llama2Genie.dir/main.cpp.o	c8b6902f8357b675
+4	353	7854359368558456	build.ninja	5a52b75d2875b5ac
+0	17	0	clean	c17e2d8af63f63a2
+0	13	0	clean	c17e2d8af63f63a2

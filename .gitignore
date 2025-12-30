@@ -1,0 +1,17 @@
+# Gradle
+.gradle/
+**/build/
+
+# IntelliJ / Android Studio
+.idea/
+*.iml
+
+# Logs / temp
+*.log
+.DS_Store
+
+# (선택) 큰 바이너리/모델 산출물 패턴 - 빌드폴더 밖에 둘 경우 대비
+*.onnx
+*.tflite
+*.pt
+*.bin

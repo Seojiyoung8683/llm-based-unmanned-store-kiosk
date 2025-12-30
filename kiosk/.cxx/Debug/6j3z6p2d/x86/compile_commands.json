@@ -1,0 +1,22 @@
+[
+{
+  "directory": "C:/kioskfinal/kiosk/.cxx/Debug/6j3z6p2d/x86",
+  "command": "C:\\Users\\ssshd\\AppData\\Local\\Android\\Sdk\\ndk\\26.1.10909125\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=i686-none-linux-android26 --sysroot=C:/Users/ssshd/AppData/Local/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/windows-x86_64/sysroot -DLlama2Genie_EXPORTS -IC:/kioskfinal/kiosk/src/main/cpp -IC:/kioskfinal/kiosk/src/main/cpp/Genie_inc -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -std=c++17 -std=c++14 -fno-limit-debug-info  -fPIC -o CMakeFiles\\Llama2Genie.dir\\native-lib.cpp.o -c C:\\kioskfinal\\kiosk\\src\\main\\cpp\\native-lib.cpp",
+  "file": "C:\\kioskfinal\\kiosk\\src\\main\\cpp\\native-lib.cpp"
+},
+{
+  "directory": "C:/kioskfinal/kiosk/.cxx/Debug/6j3z6p2d/x86",
+  "command": "C:\\Users\\ssshd\\AppData\\Local\\Android\\Sdk\\ndk\\26.1.10909125\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=i686-none-linux-android26 --sysroot=C:/Users/ssshd/AppData/Local/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/windows-x86_64/sysroot -DLlama2Genie_EXPORTS -IC:/kioskfinal/kiosk/src/main/cpp -IC:/kioskfinal/kiosk/src/main/cpp/Genie_inc -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -std=c++17 -std=c++14 -fno-limit-debug-info  -fPIC -o CMakeFiles\\Llama2Genie.dir\\main.cpp.o -c C:\\kioskfinal\\kiosk\\src\\main\\cpp\\main.cpp",
+  "file": "C:\\kioskfinal\\kiosk\\src\\main\\cpp\\main.cpp"
+},
+{
+  "directory": "C:/kioskfinal/kiosk/.cxx/Debug/6j3z6p2d/x86",
+  "command": "C:\\Users\\ssshd\\AppData\\Local\\Android\\Sdk\\ndk\\26.1.10909125\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=i686-none-linux-android26 --sysroot=C:/Users/ssshd/AppData/Local/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/windows-x86_64/sysroot -DLlama2Genie_EXPORTS -IC:/kioskfinal/kiosk/src/main/cpp -IC:/kioskfinal/kiosk/src/main/cpp/Genie_inc -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -std=c++17 -std=c++14 -fno-limit-debug-info  -fPIC -o CMakeFiles\\Llama2Genie.dir\\Logging.cpp.o -c C:\\kioskfinal\\kiosk\\src\\main\\cpp\\Logging.cpp",
+  "file": "C:\\kioskfinal\\kiosk\\src\\main\\cpp\\Logging.cpp"
+},
+{
+  "directory": "C:/kioskfinal/kiosk/.cxx/Debug/6j3z6p2d/x86",
+  "command": "C:\\Users\\ssshd\\AppData\\Local\\Android\\Sdk\\ndk\\26.1.10909125\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=i686-none-linux-android26 --sysroot=C:/Users/ssshd/AppData/Local/Android/Sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/windows-x86_64/sysroot -DLlama2Genie_EXPORTS -IC:/kioskfinal/kiosk/src/main/cpp -IC:/kioskfinal/kiosk/src/main/cpp/Genie_inc -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -std=c++17 -std=c++14 -fno-limit-debug-info  -fPIC -o CMakeFiles\\Llama2Genie.dir\\LlmClient.cpp.o -c C:\\kioskfinal\\kiosk\\src\\main\\cpp\\LlmClient.cpp",
+  "file": "C:\\kioskfinal\\kiosk\\src\\main\\cpp\\LlmClient.cpp"
+}
+]
