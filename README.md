@@ -96,11 +96,9 @@
 
 ### 🔹 LLM Inference API
 
-```kotlin
 LlmClient.runInference(prompt: String): LlmResult
 🔹 Response Example
-json
-코드 복사
+
 {
   "token": "TURN_ON_LIGHT",
   "parameters": {
