@@ -1,3 +1,4 @@
+# JARVIS
 ## **On-Device AI 기반 무인 판매점 키오스크 시스템**
 
 ---
@@ -7,7 +8,7 @@
 **JARVIS**는 Qualcomm **QCS6490** 기반의 **온디바이스 AI**를 활용한  
 무인 판매점용 지능형 키오스크 시스템이다.
 
-본 프로젝트는 클라우드 서버에 의존하지 않고
+본 프로젝트는 클라우드 서버에 의존하지 않고  
 디바이스 내부에서 **음성 인식(STT), 대규모 언어 모델(LLM), 음성 합성(TTS), 이상행동 감지**를 수행함으로써  
 **보안성, 응답 속도, 전력 효율**을 동시에 확보하는 것을 목표로 한다.
 
@@ -32,12 +33,15 @@
 ## 🏗 System Architecture
 
 본 시스템은 **3계층 온디바이스 AI 아키텍처**로 구성된다.
+
 [Kotlin / Java Layer]
 └─ ConversationService
 └─ LlmClient (JNI Interface)
 └─ Native C++ Inference Engine
 └─ QNN Runtime (HTP / Hexagon DSP)
 
+yaml
+코드 복사
 
 - Android(Java/Kotlin) 환경에서는 NPU 직접 호출이 불가능하므로 **JNI 필수**
 - C++ Native Layer에서 QNN Runtime 및 Genie Dialog를 통해 추론 수행
@@ -53,6 +57,9 @@
 → LLM 추론 (JNI → QNN → DSP)
 → Command Token 생성
 → 매장 제어 / TTS 음성 출력
+
+yaml
+코드 복사
 
 ---
 
@@ -96,10 +103,9 @@
 
 ```kotlin
 LlmClient.runInference(prompt: String): LlmResult
-
-
-Response Example
-
+🔹 Response Example
+json
+코드 복사
 {
   "token": "TURN_ON_LIGHT",
   "parameters": {
@@ -107,7 +113,6 @@ Response Example
   },
   "rawText": "입구의 불을 켤게요."
 }
-
 🔹 Supported Command Tokens
 Token	Description
 OPEN_DOOR	문 열기
@@ -115,137 +120,86 @@ CLOSE_DOOR	문 닫기
 TURN_ON_LIGHT	조명 켜기
 PLAY_MUSIC	음악 재생
 STOP_MUSIC	음악 정지
+
 🚀 Deployment
 🔹 Model & Runtime Installation
-
 모델 파일 경로
 
+swift
+코드 복사
 /data/local/tmp/model/
-
-
 모델 파일 전송
 
+bash
+코드 복사
 adb push model.bin /data/local/tmp/model/
+QNN Runtime
 
-
-QNN Runtime .so 파일
-→ jniLibs/arm64-v8a 디렉토리에 포함
+.so 파일 → jniLibs/arm64-v8a 디렉토리에 포함
 
 🔹 Requirements
-
 Android 10 이상
 
 RAM 4GB 이상 권장
 
 DSP 가속 필수
 
-
----
-
-
-## 🎬 Demo
-
-### 1️⃣ 메인 페이지
-
-<img width="365" height="713" alt="image" src="https://github.com/user-attachments/assets/a5f23771-c63c-4d2f-b5a0-acfa8f4ac083" />
-
-키오스크 초기 진입 화면  
+🎬 Demo
+1️⃣ 메인 페이지
+<img width="365" src="https://github.com/user-attachments/assets/a5f23771-c63c-4d2f-b5a0-acfa8f4ac083" />
+키오스크 초기 진입 화면
 상품 탐색, 음성 입력, 결제 등 주요 기능의 진입점
 
----
+2️⃣ 음성 입력 기반 매장 상호작용
+<img width="367" src="https://github.com/user-attachments/assets/dabc30bf-4fb6-477e-b09a-4b2c28ef1f60" />
+“문 열어줘” → 3D 매장 입구 개방
 
-### 2️⃣ 음성 입력 기반 매장 상호작용
+“새우깡 어디에 있어?” →
+“새우깡은 A구역에 있습니다” 음성 응답과 함께 상품 디테일 정보 표시
 
-<img width="367" height="706" alt="image" src="https://github.com/user-attachments/assets/dabc30bf-4fb6-477e-b09a-4b2c28ef1f60" />
+“A구역에 뭐가 있어?” →
+해당 구역에 위치한 상품 목록 안내
 
-사용자의 음성을 인식하여 온디바이스 AI가 매장과 상호작용
+3️⃣ 제품 목록 페이지
+<img width="366" src="https://github.com/user-attachments/assets/39bbe17d-d030-473a-9842-94eac30a8616" />
+매장 내 전체 상품을 카테고리별로 확인 가능
 
-- **“문 열어줘”** → 3D 매장 입구 개방  
-- **“새우깡 어디에 있어?”** →  
-  “새우깡은 A구역에 있습니다” 음성 응답과 함께  
-  상품 디테일 정보 표시  
-- **“A구역에 뭐가 있어?”** →  
-  해당 구역에 위치한 상품 목록 안내
+4️⃣ 제품 디테일 페이지
+<img width="365" src="https://github.com/user-attachments/assets/aec9053a-82a0-43bf-b03d-cd38b5d2e24e" />
+상품의 가격, 설명, 이미지 등 상세 정보 제공
 
----
-
-### 3️⃣ 제품 목록 페이지
-
-<img width="366" height="708" alt="image" src="https://github.com/user-attachments/assets/39bbe17d-d030-473a-9842-94eac30a8616" />
-
-매장 내 전체 상품을 카테고리별로 확인 가능  
-상품 선택 시 상세 페이지로 이동
-
----
-
-### 4️⃣ 제품 디테일 페이지
-
-<img width="365" height="711" alt="image" src="https://github.com/user-attachments/assets/aec9053a-82a0-43bf-b03d-cd38b5d2e24e" />
-
-선택한 상품의 상세 정보 제공  
-가격, 설명, 이미지 등 확인 가능
-
----
-
-### 5️⃣ 결제 페이지
-
-<img width="362" height="715" alt="image" src="https://github.com/user-attachments/assets/22340a7f-edfe-4647-81a2-5e770fd3b5fb" />
-
-선택한 상품을 기반으로 결제 진행  
+5️⃣ 결제 페이지
+<img width="362" src="https://github.com/user-attachments/assets/22340a7f-edfe-4647-81a2-5e770fd3b5fb" />
 무인 키오스크 환경에 최적화된 결제 UI 제공
 
----
+6️⃣ 관리자 모드 진입
+<img width="369" src="https://github.com/user-attachments/assets/9fc5579f-70fc-462d-8d39-11d4ebd61792" />
+메인 페이지에서 아이콘 4회 클릭 시
+관리자 비밀번호 입력 화면 표시
 
-### 6️⃣ 관리자 모드 진입
+7️⃣ 관리자 대시보드
+<img width="369" src="https://github.com/user-attachments/assets/8620051f-c13d-4862-8ed3-ecc2102c3b86" />
+금일 매출
 
-<img width="369" height="719" alt="image" src="https://github.com/user-attachments/assets/9fc5579f-70fc-462d-8d39-11d4ebd61792" />
+거래 건수
 
-메인 페이지에서 **아이콘 4회 클릭** 시  
-관리자 비밀번호 입력 화면 표시  
-비밀번호가 일치하면 관리자 페이지로 이동
+평균 거래 금액
 
----
+일별 매출
 
-### 7️⃣ 관리자 대시보드
+많이 팔린 상품 TOP 5
 
-<img width="369" height="719" alt="image" src="https://github.com/user-attachments/assets/8620051f-c13d-4862-8ed3-ecc2102c3b86" />
+8️⃣ 매장 제어 페이지
+<img width="363" src="https://github.com/user-attachments/assets/8aff4f10-5997-4fd4-9ff5-0dd79ac4a3ab" />
+관리자 권한으로
+문, 조명, 에어컨, 블라인드 제어
 
-매장 운영 현황을 한눈에 확인 가능한 관리자 페이지
-
-- 금일 매출
-- 거래 건수
-- 평균 거래 금액
-- 일별 매출 그래프
-- 많이 팔린 상품 TOP 5
-
----
-
-### 8️⃣ 매장 제어 페이지
-
-<img width="363" height="708" alt="image" src="https://github.com/user-attachments/assets/8aff4f10-5997-4fd4-9ff5-0dd79ac4a3ab" />
-
-관리자 권한으로 매장 환경 제어
-
-- 문 제어
-- 조명 제어
-- 에어컨 제어
-- 블라인드 제어
-
----
-
-### 9️⃣ 상품 및 재고 관리
-
-<img width="361" height="713" alt="image" src="https://github.com/user-attachments/assets/0aedc6b5-e8ea-4835-a094-08ac2e0d8729" />
-
+9️⃣ 상품 및 재고 관리
+<img width="361" src="https://github.com/user-attachments/assets/0aedc6b5-e8ea-4835-a094-08ac2e0d8729" />
 상품 생성, 수정, 삭제 기능 제공
-
-![재고 관리](docs/images/demo_inventory.png)
-
-재고 현황 확인 및 재고 리필 관리 페이지
-
+재고 현황 확인 및 재고 리필 관리
 
 🧠 Retrospective
-
 JNI 기반 온디바이스 AI 구조에 대한 실전 이해
 
 NPU/DSP 환경에서의 모델 최적화 경험
@@ -254,3 +208,5 @@ NPU/DSP 환경에서의 모델 최적화 경험
 
 단순 기능 구현을 넘어 시스템 전체 흐름 설계의 중요성을 체감
 
+yaml
+코드 복사
