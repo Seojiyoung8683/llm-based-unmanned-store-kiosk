@@ -8,7 +8,7 @@
 무인 판매점용 지능형 키오스크 시스템이다.
 
 본 프로젝트는 클라우드 서버에 의존하지 않고  
-디바이스 내부에서 **음성 인식(STT), 대규모 언어 모델(LLM), 음성 합성(TTS), 이상행동 감지**를 수행함으로써  
+디바이스 내부에서 **음성 인식(STT), 대규모 언어 모델(LLM), 음성 합성(TTS)** 를 수행함으로써  
 **보안성, 응답 속도, 전력 효율**을 동시에 확보하는 것을 목표로 한다.
 
 특히 Qualcomm **Hexagon DSP(NPU)** 가속과 **JNI 기반 구조**를 통해  
@@ -39,8 +39,6 @@
 └─ Native C++ Inference Engine
 └─ QNN Runtime (HTP / Hexagon DSP)
 
-yaml
-코드 복사
 
 - Android(Java/Kotlin) 환경에서는 NPU 직접 호출이 불가능하므로 **JNI 필수**
 - C++ Native Layer에서 QNN Runtime 및 Genie Dialog를 통해 추론 수행
@@ -57,8 +55,6 @@ yaml
 → Command Token 생성
 → 매장 제어 / TTS 음성 출력
 
-yaml
-코드 복사
 
 ---
 
@@ -124,13 +120,11 @@ STOP_MUSIC	음악 정지
 🔹 Model & Runtime Installation
 모델 파일 경로
 
-swift
-코드 복사
+
 /data/local/tmp/model/
 모델 파일 전송
 
-bash
-코드 복사
+
 adb push model.bin /data/local/tmp/model/
 QNN Runtime
 
@@ -206,6 +200,3 @@ NPU/DSP 환경에서의 모델 최적화 경험
 로그가 제한적인 하드웨어 환경에서의 디버깅 경험
 
 단순 기능 구현을 넘어 시스템 전체 흐름 설계의 중요성을 체감
-
-yaml
-코드 복사
