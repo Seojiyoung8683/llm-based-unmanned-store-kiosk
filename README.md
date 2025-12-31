@@ -1,4 +1,3 @@
-# JARVIS
 ## **On-Device AI 기반 무인 판매점 키오스크 시스템**
 
 ---
@@ -25,11 +24,8 @@
   - Qualcomm QNN + Hexagon DSP 가속
 - 🏪 **매장 제어 기능**
   - 음성 명령을 통한 문 열기, 조명 제어, 음악 재생
-- 🚨 **이상 행동 감지**
-  - 카메라 기반 절도 등 비정상 행동 탐지 및 알림
 - 🔒 **완전 로컬 처리**
   - 영상·음성 데이터 외부 서버 전송 없음
-- 🔄 **OTA 기반 모델 업데이트 구조**
 
 ---
 
@@ -142,15 +138,6 @@ Android 10 이상
 RAM 4GB 이상 권장
 
 DSP 가속 필수
-
-🧪 Testing & Performance
-🔹 Test Environment
-
-Qualcomm QCS6490 실제 보드
-
-Android 기반 키오스크 앱
-
-실사용 음성 데이터 기반 테스트
 
 
 ## 🎬 Demo
